@@ -11,6 +11,7 @@ namespace Completed
 
         void Awake()
         {
+            foodText = this.transform.GetComponent<Text>();
             Player.onFoodUpdated += updateFood;
             Player.onFoodSetted += setFood;
         }

@@ -72,9 +72,11 @@ namespace Completed
 			else
 				//Check if target x position is greater than enemy's x position, if so set x direction to 1 (move right), if not set to -1 (move left).
 				xDir = target.position.x > transform.position.x ? 1 : -1;
-			
+
 			//Call the AttemptMove function and pass in the generic parameter Player, because Enemy is moving and expecting to potentially encounter a Player
-			AttemptMove <Player> (xDir, yDir);
+			//			AttemptMove <Player> (xDir, yDir);
+
+			new CommandMove(this.gameObject.GetComponent<MovingObject>(), xDir, yDir).Execute();
 		}
 		
 		

@@ -4,13 +4,13 @@ using UnityEngine;
 
 namespace Completed
 {
-    public class CommandMove : Command { 
+    public class CommandMoveEnemy : Command { 
 
         private MovingObject obj;
         private int horizontal, vertical;
 
 
-        public CommandMove(MovingObject obj, int horizontal, int vertical)
+        public CommandMoveEnemy(MovingObject obj, int horizontal, int vertical)
         {
             this.obj = obj;
             this.horizontal = horizontal;
@@ -18,7 +18,7 @@ namespace Completed
         }
  
         public override void Execute() {
-            obj.AttemptMove<Wall>(horizontal, vertical);
+            obj.AttemptMove<Player>(horizontal, vertical);
         }
 
         public override void Undo() { }

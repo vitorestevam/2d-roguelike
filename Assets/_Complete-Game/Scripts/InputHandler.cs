@@ -68,11 +68,11 @@ namespace Completed
 #endif
 			if (horizontal != 0)
 			{
-				return new CommandMove(this.gameObject.GetComponent<MovingObject>(), horizontal, 0);
+				return new CommandMovePlayer(this.gameObject.GetComponent<MovingObject>(), horizontal, 0);
 			}
 			else if (vertical != 0)
 			{
-				return new CommandMove(this.gameObject.GetComponent<MovingObject>(), 0, vertical);
+				return new CommandMovePlayer(this.gameObject.GetComponent<MovingObject>(), 0, vertical);
 			}
 			return null;
 		}

@@ -76,7 +76,7 @@ namespace Completed
 			//Call the AttemptMove function and pass in the generic parameter Player, because Enemy is moving and expecting to potentially encounter a Player
 			//			AttemptMove <Player> (xDir, yDir);
 
-			new CommandMove(this.gameObject.GetComponent<MovingObject>(), xDir, yDir).Execute();
+			new CommandMoveEnemy(this.gameObject.GetComponent<MovingObject>(), xDir, yDir).Execute();
 		}
 		
 		

@@ -18,7 +18,6 @@ namespace Completed
         }
  
         public override void Execute() {
-            Debug.Log("inside command" + this.obj + this.horizontal + this.vertical);
             obj.AttemptMove<Wall>(horizontal, vertical);
         }
 

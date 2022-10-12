@@ -7,8 +7,8 @@ namespace Completed
 	public class Enemy : MovingObject
 	{
 		public int playerDamage; 							//The amount of food points to subtract from the player when attacking.
-		public AudioClip attackSound1;						//First of two audio clips to play when attacking the player.
-		public AudioClip attackSound2;						//Second of two audio clips to play when attacking the player.
+		public static AudioClip attackSound1;						//First of two audio clips to play when attacking the player.
+		public static AudioClip attackSound2;						//Second of two audio clips to play when attacking the player.
 		
 		
 		private Animator animator;							//Variable of type Animator to store a reference to the enemy's Animator component.
@@ -76,7 +76,7 @@ namespace Completed
 			//Call the AttemptMove function and pass in the generic parameter Player, because Enemy is moving and expecting to potentially encounter a Player
 			//			AttemptMove <Player> (xDir, yDir);
 
-			new CommandMove(this.gameObject.GetComponent<MovingObject>(), xDir, yDir).Execute();
+			new CommandMoveEnemy(this.gameObject.GetComponent<MovingObject>(), xDir, yDir).Execute();
 		}
 		
 		
